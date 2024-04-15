@@ -9,5 +9,7 @@
   "showUnsupportedFiles": true,
   "attachmentFolderPath": "Attachments/",
   "trashOption": "local",
-  "tabSize": 2
+  "tabSize": 2,
+  "showInlineTitle": false,
+  "readableLineLength": true
 }
