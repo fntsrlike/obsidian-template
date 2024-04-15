@@ -1,1 +1,10 @@
-{}
+{
+  "showLineNumber": true,
+  "propertiesInDocument": "visible",
+  "useTab": false,
+  "alwaysUpdateLinks": true,
+  "showUnsupportedFiles": true,
+  "attachmentFolderPath": "Attachments/",
+  "trashOption": "local",
+  "tabSize": 2
+}
