@@ -1,8 +1,11 @@
 {
+  "promptDelete": false,
   "showLineNumber": true,
   "propertiesInDocument": "visible",
   "useTab": false,
   "alwaysUpdateLinks": true,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "Notes/Inbox",
   "showUnsupportedFiles": true,
   "attachmentFolderPath": "Attachments/",
   "trashOption": "local",
