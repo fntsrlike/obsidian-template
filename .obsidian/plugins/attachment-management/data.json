@@ -4,7 +4,37 @@
     "saveAttE": "inFolderBelow",
     "attachmentPath": "${notepath}/",
     "attachFormat": "${md5}-${originalname}",
-    "type": "GLOBAL"
+    "type": "GLOBAL",
+    "extensionOverride": [
+      {
+        "extension": "tiff|jpge?|png|gif|bmp|svg|webp|heic",
+        "attachmentRoot": "Attachments/",
+        "saveAttE": "inFolderBelow",
+        "attachmentPath": "${notepath}/images",
+        "attachFormat": "${md5}-${originalname}"
+      },
+      {
+        "extension": "pdf|docx?|xlsx?|pptx?|pages|csv",
+        "attachmentRoot": "Attachments/",
+        "saveAttE": "inFolderBelow",
+        "attachmentPath": "${notepath}/documents",
+        "attachFormat": "${md5}-${originalname}"
+      },
+      {
+        "extension": "mp4|mov|wmv|avi|flv",
+        "attachmentRoot": "Attachments/",
+        "saveAttE": "inFolderBelow",
+        "attachmentPath": "${notepath}/videos",
+        "attachFormat": "${md5}-${originalname}"
+      },
+      {
+        "extension": "midi|webm|wav|mp3|m4a|3gp|wma",
+        "attachmentRoot": "Attachments/",
+        "saveAttE": "inFolderBelow",
+        "attachmentPath": "${notepath}/sounds",
+        "attachFormat": "${md5}-${originalname}"
+      }
+    ]
   },
   "dateFormat": "YYYYMMDDHHmmssSSS",
   "excludeExtensionPattern": "",
