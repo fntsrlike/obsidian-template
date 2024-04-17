@@ -12,5 +12,6 @@
   "find-unlinked-files",
   "influx",
   "link-with-alias",
-  "obsidian-git"
+  "obsidian-git",
+  "mousewheel-image-zoom"
 ]
