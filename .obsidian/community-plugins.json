@@ -14,5 +14,6 @@
   "link-with-alias",
   "obsidian-git",
   "mousewheel-image-zoom",
-  "recent-files-obsidian"
+  "recent-files-obsidian",
+  "obsidian-sort-and-permute-lines"
 ]
