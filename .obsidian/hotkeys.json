@@ -6,5 +6,13 @@
         "Mod"
       ]
     }
+  ],
+  "editor:toggle-highlight": [
+    {
+      "key": "H",
+      "modifiers": [
+        "Mod"
+      ]
+    }
   ]
 }
