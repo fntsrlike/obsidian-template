@@ -142,14 +142,18 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:開啟快速切換": false,
+      "switcher:開啟快速切換": true,
       "graph:查看關聯圖": false,
       "canvas:建立新畫布": false,
       "daily-notes:開啟今天的每日筆記": false,
-      "templates:插入模板": false,
-      "command-palette:開啟命令面板": false,
-      "workspaces:管理工作區配置": false,
-      "audio-recorder:開始/停止錄音": false
+      "templates:插入模板": true,
+      "command-palette:開啟命令面板": true,
+      "audio-recorder:開始/停止錄音": false,
+      "workspaces:管理工作區配置": true,
+      "code-files:Create Code File": true,
+      "templater-obsidian:Templater": true,
+      "table-editor-obsidian:Advanced Tables Toolbar": true,
+      "obsidian-trash-explorer:Open trash explorer": true
     }
   },
   "active": "45e92ec48f16ac2c",
