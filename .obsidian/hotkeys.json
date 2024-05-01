@@ -1,6 +1,7 @@
 {
   "app:go-back": [],
   "app:go-forward": [],
+  "editor:insert-link": [],
   "editor:swap-line-down": [
     {
       "key": "ArrowDown",
@@ -94,6 +95,14 @@
     }
   ],
   "obsidian-auto-link-title:enhance-url-with-title": [],
+  "switcher:open": [
+    {
+      "key": "O",
+      "modifiers": [
+        "Mod"
+      ]
+    }
+  ],
   "workspace:next-tab": [
     {
       "key": "Tab",
