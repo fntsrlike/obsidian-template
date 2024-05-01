@@ -65,5 +65,23 @@
         "Shift"
       ]
     }
-  ]
+  ],
+  "editor:toggle-source": [
+    {
+      "key": "E",
+      "modifiers": [
+        "Mod"
+      ]
+    }
+  ],
+  "markdown:toggle-preview": [
+    {
+      "key": "E",
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ]
+    }
+  ],
+  "obsidian-auto-link-title:enhance-url-with-title": []
 }
