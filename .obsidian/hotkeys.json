@@ -1,4 +1,28 @@
 {
+  "editor:toggle-bullet-list": [
+    {
+      "key": "L",
+      "modifiers": [
+        "Mod"
+      ]
+    },
+    {
+      "key": "L",
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ]
+    }
+  ],
+  "editor:toggle-checklist-status": [
+    {
+      "key": "J",
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ]
+    }
+  ],
   "editor:toggle-code": [
     {
       "key": "U",
@@ -12,6 +36,15 @@
       "key": "H",
       "modifiers": [
         "Mod"
+      ]
+    }
+  ],
+  "editor:toggle-numbered-list": [
+    {
+      "key": "K",
+      "modifiers": [
+        "Mod",
+        "Shift"
       ]
     }
   ]
