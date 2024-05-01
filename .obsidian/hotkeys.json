@@ -1,4 +1,6 @@
 {
+  "app:go-back": [],
+  "app:go-forward": [],
   "editor:swap-line-down": [
     {
       "key": "ArrowDown",
@@ -91,5 +93,50 @@
       ]
     }
   ],
-  "obsidian-auto-link-title:enhance-url-with-title": []
+  "obsidian-auto-link-title:enhance-url-with-title": [],
+  "workspace:next-tab": [
+    {
+      "key": "Tab",
+      "modifiers": [
+        "Ctrl"
+      ]
+    },
+    {
+      "key": "]",
+      "modifiers": [
+        "Meta",
+        "Shift"
+      ]
+    },
+    {
+      "key": "ArrowRight",
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ]
+    }
+  ],
+  "workspace:previous-tab": [
+    {
+      "key": "Tab",
+      "modifiers": [
+        "Ctrl",
+        "Shift"
+      ]
+    },
+    {
+      "key": "[",
+      "modifiers": [
+        "Meta",
+        "Shift"
+      ]
+    },
+    {
+      "key": "ArrowLeft",
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ]
+    }
+  ]
 }
