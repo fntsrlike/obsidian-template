@@ -1,4 +1,14 @@
 {
+  "app:delete-file": [
+    {
+      "key": "D",
+      "modifiers": [
+        "Ctrl",
+        "Mod",
+        "Shift"
+      ]
+    }
+  ],
   "app:go-back": [],
   "app:go-forward": [],
   "editor:insert-link": [],
