@@ -1,1 +1,4 @@
-{}
+{
+  "minimal-style@@code-background@@dark": "#343434",
+  "minimal-style@@code-normal@@dark": "#90E0FF"
+}
