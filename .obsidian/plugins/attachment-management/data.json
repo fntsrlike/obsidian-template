@@ -1,9 +1,9 @@
 {
   "attachPath": {
-    "attachmentRoot": "",
-    "saveAttE": "obsFolder",
-    "attachmentPath": "${notepath}/${notename}",
-    "attachFormat": "IMG-${date}",
+    "attachmentRoot": "Attachments/",
+    "saveAttE": "inFolderBelow",
+    "attachmentPath": "${notepath}/",
+    "attachFormat": "${md5}-${originalname}",
     "type": "GLOBAL"
   },
   "dateFormat": "YYYYMMDDHHmmssSSS",
