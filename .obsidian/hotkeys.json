@@ -74,6 +74,14 @@
       ]
     }
   ],
+  "link-with-alias:create-link-with-alias": [
+    {
+      "key": "K",
+      "modifiers": [
+        "Mod"
+      ]
+    }
+  ],
   "markdown:toggle-preview": [
     {
       "key": "E",
