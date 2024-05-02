@@ -95,6 +95,7 @@
       ]
     }
   ],
+  "file-explorer:new-file-in-new-pane": [],
   "link-with-alias:create-link-with-alias": [
     {
       "key": "K",
