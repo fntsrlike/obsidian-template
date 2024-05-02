@@ -87,6 +87,14 @@
       ]
     }
   ],
+  "file-explorer:move-file": [
+    {
+      "key": "M",
+      "modifiers": [
+        "Mod"
+      ]
+    }
+  ],
   "link-with-alias:create-link-with-alias": [
     {
       "key": "K",
