@@ -3,7 +3,7 @@ aliases:
 tags: 
 created_cw: 24cw18
 created_at: 2024-05-01 15:34:10 +08:00
-updated_at: 2024-05-01 15:34:10 +08:00
+updated_at: 2024-05-03 02:43:00 +08:00
 ---
 
 # README
@@ -96,6 +96,23 @@ Inspired by
 2. `Hider`: 隱藏介面上的相關元件
 3. `Minimal Theme Settings`: 用來設置 Minimal Theme
 4. `Style Setting`: 可以修改 CSS 變數，我主要用來客製化 Minimal Theme 更多樣式細節
+
+### To Install?
+
+- [obsidian-charts](https://github.com/phibr0/obsidian-charts)
+- [obsidian-annotator](https://github.com/elias-sundqvist/obsidian-annotator)
+- [media-extended](https://github.com/PKM-er/media-extended) [Media Extended – Media Extended](https://mx.pkmer.net)
+- [obsidian-timelines](https://github.com/seanlowe/obsidian-timelines)
+- [obsidian-tasks](https://github.com/obsidian-tasks-group/obsidian-tasks)
+- [obsidian-kanban](https://github.com/mgmeyers/obsidian-kanban)
+- [obsidian-day-planner](https://github.com/ivan-lednev/obsidian-day-planner)
+- [obsidian-day-planner-og](https://github.com/ebullient/obsidian-day-planner-og)
+- [quickadd](https://github.com/chhoumann/quickadd)
+- [obsidian-omnisearch](https://github.com/scambier/obsidian-omnisearch)
+
+### To Research / Revamp
+
+- [GitHub - lynchjames/obsidian-mind-map: An Obsidian plugin for displaying markdown notes as mind maps using Markmap.](https://github.com/lynchjames/obsidian-mind-map)
 
 ## Setup
 
