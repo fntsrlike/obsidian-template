@@ -39,6 +39,22 @@
             }
           },
           {
+            "id": "954f9aae8f48ea46",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          },
+          {
+            "id": "90a71645625aa2d8",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {}
+            }
+          },
+          {
             "id": "5a9e7ef527948ec1",
             "type": "leaf",
             "state": {
@@ -54,18 +70,21 @@
             }
           },
           {
-            "id": "44fcfd9ac7758a06",
+            "id": "c8c0a282d0373bce",
             "type": "leaf",
             "state": {
-              "type": "bookmarks",
-              "state": {}
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 262.5
   },
   "right": {
     "id": "62a3251243407010",
