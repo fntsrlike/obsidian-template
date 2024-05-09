@@ -95,6 +95,14 @@
         "type": "tabs",
         "children": [
           {
+            "id": "166d8e3caafa52b5",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          },
+          {
             "id": "11dd76848140b174",
             "type": "leaf",
             "state": {
@@ -122,42 +130,19 @@
             }
           },
           {
-            "id": "c8c0a282d0373bce",
+            "id": "c18c1c9db390187f",
             "type": "leaf",
             "state": {
-              "type": "tag",
-              "state": {
-                "sortOrder": "frequency",
-                "useHierarchy": true
-              }
-            }
-          },
-          {
-            "id": "166d8e3caafa52b5",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
+              "type": "advanced-tables-toolbar",
               "state": {}
             }
-          },
-          {
-            "id": "aeced58617a2ca92",
-            "type": "leaf",
-            "state": {
-              "type": "all-properties",
-              "state": {
-                "sortOrder": "frequency",
-                "showSearch": false,
-                "searchQuery": ""
-              }
-            }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -175,6 +160,6 @@
       "obsidian-trash-explorer:Open trash explorer": true
     }
   },
-  "active": "45e92ec48f16ac2c",
+  "active": "1c43d93a8f0e34b1",
   "lastOpenFiles": []
 }
