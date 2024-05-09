@@ -106,3 +106,24 @@ Add extension overrides:
 - docs: `pdf|docx?|xlsx?|pptx?|pages`
 - videos: `mp4|mov|wmv|avi|flv|`
 
+## Hotkeys
+
+#### 一般
+
+- `cmd + o` -> 快速切換筆記
+- `cmd + opt + <- / ->` -> 快速切換到上、下一則筆記
+- `cmd + esc` -> 切換 workspace
+- `cmd + m` -> 快速移動筆記到其他資料夾
+- `cmd + p` -> 快速開啟命令列
+
+#### 編輯
+
+- `cmd + i` -> 斜體 `**` 
+- `cmd + b` -> 粗體 `**` 
+- `cmd + h` -> 螢光 `==`
+- `cmd + shift + j` -> 待辦待辦 `— [ ]`
+- `cmd + shift + k` -> 有序清單 `1. `
+- `cmd + shift + l` -> 無序清單 `— `
+- `cmd + opt + 上 / 下` -> 移動整列文字
+- `cmd + shift + esc` -> 模板
+- `cmd + k`: create link with alias
