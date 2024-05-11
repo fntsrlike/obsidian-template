@@ -43,6 +43,44 @@
   "excludePathsArray": [],
   "excludeSubpaths": false,
   "originalNameStorage": [],
-  "overridePath": {},
+  "overridePath": {
+    "References": {
+      "attachmentRoot": "Attachments/",
+      "saveAttE": "inFolderBelow",
+      "attachmentPath": "${notepath}/${notename}",
+      "attachFormat": "${md5}-${originalname}",
+      "type": "FOLDER",
+      "extensionOverride": [
+        {
+          "extension": "tiff|jpge?|png|gif|bmp|svg|webp|heic",
+          "attachmentRoot": "Attachments/",
+          "saveAttE": "inFolderBelow",
+          "attachmentPath": "${notepath}/${notename}/images",
+          "attachFormat": "${md5}-${originalname}"
+        },
+        {
+          "extension": "pdf|docx?|xlsx?|pptx?|pages|csv",
+          "attachmentRoot": "Attachments/",
+          "saveAttE": "inFolderBelow",
+          "attachmentPath": "${notepath}/${notename}/documents",
+          "attachFormat": "${md5}-${originalname}"
+        },
+        {
+          "extension": "mp4|mov|wmv|avi|flv",
+          "attachmentRoot": "Attachments/",
+          "saveAttE": "inFolderBelow",
+          "attachmentPath": "${notepath}/${notename}/videos",
+          "attachFormat": "${md5}-${originalname}"
+        },
+        {
+          "extension": "midi|webm|wav|mp3|m4a|3gp|wma",
+          "attachmentRoot": "Attachments/",
+          "saveAttE": "inFolderBelow",
+          "attachmentPath": "${notepath}/${notename}/sounds",
+          "attachFormat": "${md5}-${originalname}"
+        }
+      ]
+    }
+  },
   "disableNotification": false
 }
