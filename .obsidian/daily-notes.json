@@ -1,6 +1,6 @@
 {
   "folder": "Journal/01. Daily Log",
-  "format": "日誌：YYYY 年 MM 月 DD 日",
+  "format": "日誌：YYYY 年 MM 月 DD 日 (dd)",
   "template": "System/Templates/Journal/Daily Log Template",
   "autorun": true
 }
