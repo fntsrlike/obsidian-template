@@ -2,5 +2,7 @@
   "accentColor": "",
   "baseFontSize": 18,
   "baseFontSizeAction": true,
-  "cssTheme": "Minimal"
+  "cssTheme": "Minimal",
+  "textFontFamily": "Sarasa Mono TC,Noto Sans Mono CJK TC",
+  "monospaceFontFamily": "Sarasa Mono TC,Noto Sans Mono CJK TC"
 }
