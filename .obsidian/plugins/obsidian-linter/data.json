@@ -227,7 +227,9 @@
       "enabled": true
     },
     "space-between-chinese-japanese-or-korean-and-english-or-numbers": {
-      "enabled": true
+      "enabled": true,
+      "english-symbols-punctuation-before": "-+;:°%$",
+      "english-symbols-punctuation-after": "-+¥$"
     },
     "trailing-spaces": {
       "enabled": true,
