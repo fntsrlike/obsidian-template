@@ -133,11 +133,11 @@
   ],
   "templater-obsidian:insert-templater": [
     {
-      "key": "Escape",
       "modifiers": [
-        "Mod",
-        "Shift"
-      ]
+        "Ctrl",
+        "Mod"
+      ],
+      "key": "Escape"
     }
   ],
   "templater-obsidian:jump-to-next-cursor-location": [],
@@ -185,6 +185,15 @@
         "Alt",
         "Mod"
       ]
+    }
+  ],
+  "templater-obsidian:System/Templates/Executable/!-customize-template-optinos.md": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "Escape"
     }
   ]
 }
