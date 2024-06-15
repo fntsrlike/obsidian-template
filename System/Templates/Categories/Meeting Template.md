@@ -16,4 +16,4 @@ updated_at: <% tp.file.last_modified_date("YYYY-MM-DD HH:mm:ss Z") %>
 
 # <% tp.file.title %>
 
-<%* await tp.user.archive_file(tp, 'Meetings') %>
+<%* await tp.user.setFileLocation(tp, 'Meetings') %>
