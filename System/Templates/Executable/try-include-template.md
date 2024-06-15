@@ -1,1 +1,0 @@
-<%* tp.file.include('[[Monthly Log Template]]') %>

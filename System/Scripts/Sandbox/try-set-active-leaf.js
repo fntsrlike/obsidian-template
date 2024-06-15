@@ -1,4 +1,4 @@
-<%*
+module.exports = (tp) => {
   app.workspace.iterateAllLeaves((leaf) => {
     if (leaf.getViewState().type === "markdown") {
       filename = leaf.view.file.basename
@@ -8,4 +8,4 @@
       }
     }
   })
-%>
+}
