@@ -88,7 +88,7 @@ __export(main_exports, {
   default: () => UNITADE_PLUGIN
 });
 module.exports = __toCommonJS(main_exports);
-var import_obsidian6 = require("obsidian");
+var import_obsidian7 = require("obsidian");
 
 // source/settings.ts
 var import_obsidian = require("obsidian");
@@ -679,7 +679,7 @@ var TFileCreate = class extends import_obsidian4.Modal {
     super(plugin.app);
     this.plugin = plugin;
     this.target = target;
-    this._filepath = this.target.path;
+    this._filepath = this.target;
     this._name = "";
     this._integration = false;
   }
@@ -751,13 +751,80 @@ var TFileCreate = class extends import_obsidian4.Modal {
   }
 };
 
-// source/utils/utils.ts
+// source/components/folder-edit.ts
 var import_obsidian5 = require("obsidian");
-function isTFile(file) {
-  return file instanceof import_obsidian5.TFile;
-}
+var TFolderEdit = class extends import_obsidian5.Modal {
+  constructor(plugin, target) {
+    var _a;
+    super(plugin.app);
+    this.plugin = plugin;
+    this.target = target;
+    (_a = this.target) != null ? _a : this.target = this.plugin.app.vault.getRoot();
+    const target_path = this.target.path.split("/");
+    target_path.pop();
+    this._foldername = this.target.name;
+    this._folderpath = target_path.join("/");
+  }
+  onOpen() {
+    const { contentEl } = this;
+    const form = contentEl.createEl("div");
+    const disp = contentEl.createEl("span");
+    const input = new import_obsidian5.TextComponent(form);
+    contentEl.style.cssText = `
+            display:          flex;
+            align-items:    center;
+            flex-direction: column;
+            `;
+    disp.style.cssText = `
+            flex-grow:       1;
+            font-weight:  bold;
+            margin-top:   10px;
+            margin-right: 10px;
+            margin-bottom: 5px;
+            text-align: center;
+            `;
+    form.style.cssText = `
+            display:       flex;
+            align-items: center;
+            `;
+    input.inputEl.style.cssText = `
+            flex-grow:       1;
+            margin-right: 10px;
+            `;
+    disp.innerHTML = this.__pathgen();
+    input.inputEl.addEventListener("keypress", (e) => {
+      if (e.key === "Enter") {
+        this.__submit();
+      } else if (e.key === "Escape") {
+        this.close();
+      }
+    });
+    input.setValue(this._foldername);
+    input.onChange((value) => {
+      this._foldername = value.startsWith(".") ? value.slice(1) : value;
+      disp.innerHTML = this.__pathgen();
+    });
+    new import_obsidian5.ButtonComponent(form).setCta().setIcon("pencil").setButtonText("Edit").onClick(() => this.__submit());
+  }
+  onClose() {
+    const { contentEl } = this;
+    contentEl.empty();
+  }
+  __submit() {
+    return __async(this, null, function* () {
+      this.close();
+      yield this.app.vault.rename(this.target, this.__pathgen());
+    });
+  }
+  __pathgen() {
+    return this._folderpath + "/" + this._foldername;
+  }
+};
+
+// source/utils/utils.ts
+var import_obsidian6 = require("obsidian");
 function isTFolder(file) {
-  return file instanceof import_obsidian5.TFolder;
+  return file instanceof import_obsidian6.TFolder;
 }
 
 // source/utils/functions.ts
@@ -791,7 +858,7 @@ function parsegroup(input) {
 }
 
 // source/main.ts
-var UNITADE_PLUGIN = class _UNITADE_PLUGIN extends import_obsidian6.Plugin {
+var UNITADE_PLUGIN = class _UNITADE_PLUGIN extends import_obsidian7.Plugin {
   constructor() {
     super(...arguments);
     this._settings = DEFAULT_SETTINGS;
@@ -800,7 +867,7 @@ var UNITADE_PLUGIN = class _UNITADE_PLUGIN extends import_obsidian6.Plugin {
     return this._settings;
   }
   get is_mobile() {
-    return import_obsidian6.Platform.isMobile && this.settings.mobile_settings.enable;
+    return import_obsidian7.Platform.isMobile && this.settings.mobile_settings.enable;
   }
   onload() {
     return __async(this, null, function* () {
@@ -874,7 +941,9 @@ var UNITADE_PLUGIN = class _UNITADE_PLUGIN extends import_obsidian6.Plugin {
       if (this._settings.markdown_overcharge)
         this.app.viewRegistry.unregisterExtensions(["md"]);
       this.addSettingTab(new UNITADE_SETTINGS_TAB(this.app, this));
-      this.app.workspace.layoutReady ? this.ltReady() : this.app.workspace.on("active-leaf-change", this.ltReady);
+      this.app.workspace.layoutReady ? this.ltReady(this.app) : this.app.workspace.on("layout-change", () => {
+        this.ltReady(this.app);
+      });
       this.registerEvent(this.__ctxEditExt());
       this.__apply();
     });
@@ -884,26 +953,40 @@ var UNITADE_PLUGIN = class _UNITADE_PLUGIN extends import_obsidian6.Plugin {
       menu.addItem((item) => {
         item.setTitle("Edit extension");
         item.setIcon("pencil").onClick(() => {
-          if (isTFolder(file))
-            return;
-          new TFileEdit(this, file).open();
+          if (isTFolder(file)) {
+            new TFolderEdit(this, file).open();
+          } else {
+            new TFileEdit(this, file).open();
+          }
         });
       }).addItem((item) => {
         item.setTitle("Create with extension");
         item.setIcon("pencil").onClick(() => {
-          if (isTFile(file))
-            return;
-          new TFileCreate(this, file).open();
+          if (isTFolder(file)) {
+            new TFileCreate(this, file.path).open();
+          } else {
+            new TFileCreate(this, file.parent.path).open();
+          }
         });
       });
     });
   }
-  ltReady() {
-    this.app.workspace.off("layout-ready", this.ltReady);
-    this.leafRef();
+  ltReady(_app) {
+    try {
+      _app.workspace.off("layout-ready", () => {
+        this.ltReady(_app);
+      });
+      this.leafRef(_app);
+    } catch (error) {
+      console.warn("Caught an error via LAYOUT-READY event.");
+    }
   }
-  leafRef() {
-    this.app.workspace.iterateCodeMirrors((cm) => cm.setOption("mode", cm.getOption("mode")));
+  leafRef(_app) {
+    try {
+      _app.workspace.iterateCodeMirrors((cm) => cm.setOption("mode", cm.getOption("mode")));
+    } catch (error) {
+      console.warn("Caught an error via LEAF-ITERATE event.");
+    }
   }
   onunload() {
     return __async(this, null, function* () {
@@ -919,7 +1002,7 @@ var UNITADE_PLUGIN = class _UNITADE_PLUGIN extends import_obsidian6.Plugin {
         if (import_codemirror2.default.modes.hasOwnProperty(key) && !["hypermd", "markdown", "null", "xml"].includes(key))
           delete import_codemirror2.default.modes[key];
       }
-      this.leafRef();
+      this.leafRef(this.app);
     });
   }
   ldSettings() {
