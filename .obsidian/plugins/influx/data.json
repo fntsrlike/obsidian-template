@@ -1,6 +1,6 @@
 {
   "settings": {
-    "liveUpdate": true,
+    "liveUpdate": false,
     "sortingPrinciple": "NEWEST_FIRST",
     "sortingAttribute": "ctime",
     "showBehaviour": "OPT_OUT",
