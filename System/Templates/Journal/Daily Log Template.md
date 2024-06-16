@@ -20,28 +20,21 @@ let tomorrow = getJournalDate(tp.file.title).add(1, 'days')
 
 # <% today.format(`日誌：YYYY 年 MM 月 DD 日 dddd`) %>
 
-| <% today.format(`YYYY 年`) %> | [[<% today.format(`月誌：YYYY 年 MM 月`) %>|<% today.format(`MM 月`) %>]] | [[<% today.format(`週誌：YYYY 年 ww 週`) %>|<% today.format(`ww 週`) %>]] | [[<% yesterday.format(`日誌：YYYY 年 MM 月 DD 日 (dd)`) %>| 👈 <% yesterday.format(`MM/DD dd`) %>]] | Today | [[<% tomorrow.format(`日誌：YYYY 年 MM 月 DD 日 (dd)`) %>|<% tomorrow.format(`MM/DD dd`) %> 👉]] | [[Future Log]] |
+| <% today.format(`YYYY 年`) %> | [[<% today.format(`月誌：YYYY 年 MM 月`) %>|<% today.format(`MM 月`) %>]] | [[<% today.format(`週誌：YYYY 年 ww 週`) %>|<% today.format(`ww 週`) %>]] | [[<% yesterday.format(`日誌：YYYY 年 MM 月 DD 日 (dd)`) %>| 👈 <% yesterday.format(`MM/DD (dd)`) %>]] | Today | [[<% tomorrow.format(`日誌：YYYY 年 MM 月 DD 日 (dd)`) %>|<% tomorrow.format(`MM/DD (dd)`) %> 👉]] | [[Future Log]] |
 
+## Log
 
-- [ ] to-do
-- [/] incomplete
-- [x] done
-- [-] canceled
-- [>] forwarded
-- [<] scheduling
-- [?] question
-- [!] important
-- [*] star
-- ["] quote
-- [l] location
-- [b] bookmark
-- [i] information
-- [S] savings
-- [I] idea
-- [p] pros
-- [c] cons
-- [f] fire
-- [k] key
-- [w] win
-- [u] up
-- [d] down
+- [ ] 任務：Things we have to act on
+- 記事：Things we want to remember
+- [i] 事件：Things we experience
+
+詳細語法可參見 [[SYNTAX#Check List]]。
+
+## Notes
+
+```dataview
+LIST
+FROM "Notes" OR "References" OR "Journal/Minutes"
+ OR "Journal/Projects"
+WHERE dateformat(date(created_at), "yyyy-MM-DD") = dateformat(date(this.file.journal_at), "yyyy-MM-DD")
+```
