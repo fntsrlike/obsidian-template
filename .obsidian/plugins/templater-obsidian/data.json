@@ -21,7 +21,9 @@
   ],
   "syntax_highlighting": true,
   "syntax_highlighting_mobile": false,
-  "enabled_templates_hotkeys": [],
+  "enabled_templates_hotkeys": [
+    "System/Templates/Executable/!-customize-template-optinos.md"
+  ],
   "startup_templates": [],
   "enable_ribbon_icon": true
 }
