@@ -4,5 +4,8 @@
   "baseFontSizeAction": true,
   "cssTheme": "Minimal",
   "textFontFamily": "Sarasa Mono TC,Noto Sans Mono CJK TC",
-  "monospaceFontFamily": "Sarasa Mono TC,Noto Sans Mono CJK TC"
+  "monospaceFontFamily": "Sarasa Mono TC,Noto Sans Mono CJK TC",
+  "enabledCssSnippets": [
+    "style"
+  ]
 }
