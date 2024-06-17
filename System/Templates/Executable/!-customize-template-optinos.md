@@ -1,6 +1,7 @@
 <%*
 const journals = {
   'auto-apply': `Apply Template by Title`,
+  'update-date': `Update timestamp`,
   'daily-log': `Today's Journal`,
   'weekly-log': `Week's Journal`,
   'monthly-log': `Month's Journal`,
@@ -11,6 +12,10 @@ options = await tp.system.suggester(Object.values(journals), Object.keys(journal
 const apply = async (option) => {
   if (option === 'auto-apply') {
     return await tp.user.applyTemplate(tp)
+  }
+
+  if (option === 'update-date') {
+    return await tp.user.updateTimestamps(tp)
   }
 
   if (option in journals) {
